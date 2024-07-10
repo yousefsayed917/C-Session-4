@@ -2,6 +2,114 @@
 {
     internal class Program
     {
+        #region func Assignment 4
+        #region func Q1
+        public static void swap(ref int x, ref int y)
+        {
+            int temp = x;
+            x = y;
+            y = temp;
+        }
+        #endregion
+        #region func Q2
+        public static int SumArr(ref int[] arr)
+        {
+            int sum = 0;
+            //arr[0] = 100;
+            arr = new int[] { 4, 5, 6 };
+            if (arr != null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+        #endregion
+        #region func Q3
+        public static (int, int) SumAndSub(int num1, int num2, int num3, int num4)
+        {
+            int sum = num1 + num2;
+            int sub = num3 - num4;
+            return (sum, sub);
+        }
+        #endregion
+        #region func Q4
+        public static int SumOfDigits(int num)
+        {
+            int sum = 0;
+            while (num != 0)
+            {
+                int x = num % 10;
+                sum += x;
+                num /= 10;
+            }
+
+            return sum;
+        }
+        #endregion
+        #region Func Q5
+        public static bool IsPrime(int num)
+        {
+            int count = 0;
+            for (int j = 1; j <= 9; j++)
+            {
+                if (num % j == 0)
+                    count++;
+            }
+            if (count == 2)
+                return true;
+            else
+                return false;
+        }
+        #endregion
+        #region func Q6
+        public static (int, int) MaxMinArray(ref int[] arr)
+        {
+            int Max = int.MinValue;
+            int Min = int.MaxValue;
+            foreach (int item in arr)
+            {
+                if (item > Max)
+                    Max = item;
+                if (item < Min)
+                    Min = item;
+            }
+            return (Max, Min);
+        }
+        #endregion
+        #region func Q7
+        public static int GetFactorial(int num)
+        {
+            int fac = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                fac *= i;
+            }
+            return fac;
+        }
+        #endregion
+        #region func Q8
+        public static string ChangeChar(ref string s, char NewChar, int Position)
+        {
+            string x = "";
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (Position < 0 || Position >= s.Length)
+                {
+                    string Exepssion = " The Position Is Out Of Range ";
+                    return Exepssion;
+                }
+                char[] charArray = s.ToCharArray();
+                charArray[Position] = NewChar;
+                x = new string(charArray);
+            }
+            return x;
+        }
+        #endregion
+        #endregion
         static void Main(string[] args)
         {
             #region Assignment 4

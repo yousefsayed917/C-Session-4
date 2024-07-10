@@ -2,6 +2,36 @@
 {
     internal class Program
     {
+        
+        #region functions Session 04
+        public static void print(string pattern = "#", int count = 7)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(pattern);
+            }
+        }
+        public static void swap(ref int x, ref int y)
+        {
+            int temp = x;
+            x = y;
+            y = temp;
+        }
+        public static int SumArr(ref int[] arr)
+        {
+            int sum = 0;
+            //arr[0] = 100;
+            arr = new int[] { 4, 5, 6 };
+            if (arr != null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region Session 04
